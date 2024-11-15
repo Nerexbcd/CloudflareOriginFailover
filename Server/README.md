@@ -6,12 +6,11 @@ This section of the project is the one that interconnects all parts and interfac
 > IN DEVELOMPENT
 
 > [!Note]
-> This Central Server is based in Socket.io and it's only prepared to work with this Project.
-
+> This Section of the Service is based in [Socket.io](https://socket.io/), meaning that it will need to be exposed by a domain/subdomain (could be vercel's one or your own), to be accessed by the other parts of the Service!
 
 
 > [!IMPORTANT]
-> Currently this Section is being prepared to be run on [Vercel](https://vercel.com/) as it is the only one that can not fail, due to being the the communication server for all parts, and **if it fails the hole system won't work !!**
+> This Section of the Service is being prepared to be run on [Vercel](https://vercel.com/), as it is **the only one that cannot fail**, due to being the the communication server for all parts, and **if it fails the hole Service won't work !!**
 
 ## Service Exposed Ports:
  - Communication Server Port -> `:3000`
