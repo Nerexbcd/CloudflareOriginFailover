@@ -1,0 +1,27 @@
+{
+    "OriginNodeURL": "https://status.nerexbcd.dev",
+    "CheckInterval": 30,
+    "FailedTries": 3,
+    "FailoverURL": "https://failover.nerexbcd.dev",
+    "ExcludedURLs": [
+    ],
+    "Cloudflare": {
+        "Token": "_aUNANbvwlrku7mC-x6QF444ynWtudH7Gj6Nx4fI",
+        "ZoneID": "2874ebf30627ed394ecde378ddffb60f",
+        "RuleSetID": "c71135737f0844b6bc90ed80ce3e8ad0"
+    },
+    "MaintenancePage": {
+        "Enabled": true,
+        "URL": "",
+        "SyncToken": ""
+    },
+    "Notification": {
+        "Telegram":{
+            "Enabled": false
+        },
+        "Discord":{
+            "Enabled": false
+        }
+    }
+
+}
