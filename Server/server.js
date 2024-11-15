@@ -44,7 +44,7 @@ io.use((socket, next) => {
 });
 
 // ------------ Config for Admin UI ------------ //
-/* instrument(io, {
+ instrument(io, {
   auth: {
     type: "basic",
     username: config.webUi_username,
@@ -52,7 +52,7 @@ io.use((socket, next) => {
   },
   readonly: config.webUi_readonly,
   mode: config.webUi_mode,
-}); */
+}); 
 
 // ------------ Start the Server ------------ //
 server.listen(3000, () => {
