@@ -1,0 +1,1 @@
+This directory is where the asset file will be stored
