@@ -1,4 +1,8 @@
 <?php
+
+echo http_response_code(404);
+exit();
+
 if (!isset($_SESSION)) {
     session_start();
 }

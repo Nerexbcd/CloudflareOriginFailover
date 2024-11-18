@@ -1,8 +1,5 @@
 <?php
 
-echo http_response_code(404);
-exit();
-
 $routesFolder = $_SERVER['DOCUMENT_ROOT'].'/Routes/';
 
 $routes = [];
