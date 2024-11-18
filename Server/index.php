@@ -20,7 +20,7 @@ $request = $request == "" ? "/" : $request;
 $request = explode('/',$request)[1] == "api" ? "/api" : $request;
 $request = explode('/',$request)[1] == "assets" ? "/assets" : $request;
 
-$views = __DIR__ . '/Views/';
+$views = $_SERVER['DOCUMENT_ROOT'] . '/Views/';
 
 require($_SERVER['DOCUMENT_ROOT']."/Lib/Base/routing.php");
 
