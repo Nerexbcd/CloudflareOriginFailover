@@ -1,4 +1,4 @@
-name: Publish to Vercel
+name: 'Publish to Vercel'
 
 on:
   workflow_dispatch:
