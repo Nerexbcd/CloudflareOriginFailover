@@ -12,6 +12,7 @@
         },
         "dest": "/Resources/$1"
       },
+      { "src": "/info.php",  "dest": "/api/info.php" },
       { "src": "/(.*)",  "dest": "/api/index.php" }
     ]
   }
