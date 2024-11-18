@@ -1,0 +1,36 @@
+name: Publish to Vercel
+
+on:
+  workflow_dispatch:
+
+jobs:
+  publish:
+    permissions:
+      contents: write
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out
+        uses: actions/checkout@v4
+
+      - name: Save Date
+        shell: bash
+        run: date > ./publish_date.txt
+
+      - name: Prepare Files
+        shell: bash
+        run: |
+          mv ./Server ./build
+          mkdir ./build/api
+          mv ./build/index.php ./build/api/index.php
+          mv ./vercel.json ./build/vercel.json
+
+      - name: Commit / Push Changes
+        uses: crazy-max/ghaction-github-pages@v4.1.0
+        with:
+          target_branch: to-vercel
+          build_dir: build
+          author: Nerexbcd <me@nerexbcd.dev>
+          committer: Nerexbcd <me@nerexbcd.dev>
+          commit_message: Publish to Vercel
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
