@@ -22,6 +22,7 @@ jobs:
           mv ./Server ./build
           mkdir ./build/api
           mv ./build/index.php ./build/api/index.php
+          mv ./build/info.php ./build/api/info.php
           mv ./vercel.json ./build/vercel.json
 
       - name: Commit / Push Changes
