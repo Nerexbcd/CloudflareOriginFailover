@@ -5,6 +5,13 @@
       }
     },
     "routes": [
+      {
+        "src": "/Resources/(.*)",
+        "headers": {
+        "cache-control": "s-maxage=604800"
+        },
+        "dest": "/Resources/$1"
+      },
       { "src": "/(.*)",  "dest": "/api/index.php" }
     ]
   }
