@@ -7,9 +7,17 @@ $routes = [];
 $routesFiles = scandir($routesFolder);
 
 foreach ($routesFiles as $file) {
-    $routePath = $routesFolder . '/' . $file;
+    if ($file == '.' || $file == '..') {
+        unset($routesFiles[array_search($file,$routesFiles)]);
+    } else {
+        $routesFiles[array_search($file,$routesFiles)] = explode('.',$file)[0];
+    }
+}
+
+foreach ($routesFiles as $file) {
+    $routePath = $routesFolder . '/' . $file . '.php';
     if (is_file($routePath)) {
-        $routes[explode('.',$file)[0]] = $routePath;
+        $routes[$file] = $routePath;
     }
 }
 
