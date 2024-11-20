@@ -14,7 +14,7 @@ function get_proxy_site_page( $url )
     ];
 
     $ch = curl_init($url);
-    curl_setopt_array($ch, $options);
+    // curl_setopt_array($ch, $options);
     $remoteSite = curl_exec($ch);
     curl_close($ch);
     return $remoteSite;
