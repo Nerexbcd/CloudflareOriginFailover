@@ -1,6 +1,6 @@
 <?php
 
-$routesFolder = $_SERVER['DOCUMENT_ROOT'].'/Routes/';
+$routesFolder = $_SERVER['DOCUMENT_ROOT'].'/Routes';
 
 $routes = [];
 

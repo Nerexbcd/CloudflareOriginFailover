@@ -13,5 +13,6 @@ setRoute('/changetheme','ChangeTheme');
 setRoute('/upload/process','ProcessUploaded');
 setRoute('/upload/sys-rec','ReceiveUpload');
 setRoute('/api','Api');
+setRoute('/404','404');
 
 ?>
