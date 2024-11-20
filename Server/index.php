@@ -1,6 +1,6 @@
 <?php
 
-// require($_SERVER['DOCUMENT_ROOT']."/Lib/Environment/accounts.php");
+require($_SERVER['DOCUMENT_ROOT']."/debug.php");
 /* require($_SERVER['DOCUMENT_ROOT']."/Lib/Utilities/database.php");
 require($_SERVER['DOCUMENT_ROOT']."/Lib/Utilities/generators.php");
 require($_SERVER['DOCUMENT_ROOT']."/Lib/Rules/permissions.php"); */
