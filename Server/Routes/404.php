@@ -1,8 +1,9 @@
 <?php
 require($_SERVER['DOCUMENT_ROOT']."/Lib/Utilities/proxyPage.php");
 
-/* echo '<script>console.log('.file_get_contents('http://failover.nerexbcd.dev/index.html', false, stream_context_create($arrContextOptions)).')</script>';
-echo file_get_contents('http://failover.nerexbcd.dev/index.html'); */
+$page =  get_proxy_site_page('https://failover.nerexbcd.dev');
 
-echo str_replace('<script src="https://failover.nerexbcd.dev/dev.js" type="text/javascript"></script>', '', str_replace('<script type="text/javascript">autoMode()</script>','<script type="text/javascript">setMode("404")</script>',str_replace('// Mode Line (Auto)','// Mode Line (Custom)',get_proxy_site_page('https://failover.nerexbcd.dev'))));
+if (!str_contains($_SERVER['HTTP_HOST'],'nerexbcd.dev')) {$page = str_replace('<script src="https://failover.nerexbcd.dev/dev.js" type="text/javascript"></script>', '',$page);}
+
+echo $page;
 http_response_code(404);
